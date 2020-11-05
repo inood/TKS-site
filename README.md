@@ -1,2 +1,2 @@
 # TKS-site
-site on django with Django-templates for recycle company
+site on Django with Django-templates for recycle company
