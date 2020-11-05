@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{#<div id="templatemo_body_wrapper">#}
+{#<div id="templatemo_wrapper">#}
+
+{#    <div id="templatemo_main">#}
+    	<div class="col_w900 float_l">
+            {% for news in news_page %}
+                    {% include "news_card.html" with news=news %}
+            {% endfor %}
+        </div>
+{#    </div>#}
+{#        #}
+{#        <div class="cleaner"></div>#}
+{#    </div> <!-- end of main -->#}
+{#	<div id="templatemo_main_bottom"></div>#}
+{#	<div class="cleaner"></div>#}
+{#</div> <!-- end of templatemo wrapper -->#}
+{#</div> <!-- end of templatemo body wrapper -->#}
+
+
+{% endblock %}

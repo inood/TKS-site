@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div id="templatemo_middle">
+    	<a href="#"><img src="{% static 'site/templatemo_icon.png'%}" alt="" /></a>
+    <div id="mid_title">{{ main_header}}</div>
+        <p>{{ main_text }}</p>
+
+        <div class="cleaner"></div>
+	</div>
+    {% include 'content.html' %}
+{% endblock %}
+<div id="templatemo_main_bottom"></div>
+	<div class="cleaner"></div>
+
+
+

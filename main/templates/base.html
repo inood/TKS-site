@@ -1,0 +1,47 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+<!doctype html>
+<html>
+<head>
+
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>ООО "ТСК"</title>
+     <meta name="keywords" content="" />
+     <meta name="description" content="" />
+    {% load static %}
+    <link href="{% static 'site/style.css'%}" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        function clearText(field)
+        {
+            if (field.defaultValue == field.value) field.value = '';
+            else if (field.value == '') field.value = field.defaultValue;
+        }
+    </script>
+
+</head>
+
+<body>
+<main>
+<div id="templatemo_body_wrapper">
+<div id="templatemo_wrapper">
+    <div id="templatemo_header">
+
+        <div id="site_title"><h1><a href="#">ТРАНСПОРТНЫЕ КОММУНАЛЬНЫЕ СИСТЕМЫ</a></h1></div>
+
+    </div>
+
+    {% include 'menu.html' %}
+
+     {% block content %}
+            <!-- Содержимое страницы -->
+     {% endblock content %}
+
+</div>
+</div>
+</main>
+{% include 'footer.html' %}
+
+</body>
+
+
+</html>

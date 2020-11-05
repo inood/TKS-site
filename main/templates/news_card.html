@@ -1,0 +1,14 @@
+{% block content %}
+<div class="post_box">
+    <div class="post_header">
+        <p class="post_meta"><span
+                class="cat">Добавлено: {{ news.author }}</span>
+            | {{ news.pub_date }}</p>
+        <h2>{{ news.title }}</h2>
+    </div>
+    {#                <a href="#"><img src="../../static/site/images/templatemo_image_06.jpg" alt="Image" /></a>#}
+    {{ news.text | safe }}
+    {#                <a class="more" href="#">Далее</a>#}
+                <div class="cleaner"></div>
+</div>
+{% endblock %}

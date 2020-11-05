@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div id="templatemo_body_wrapper">
+    <div id="templatemo_wrapper">
+    <style>
+            a[href$='.doc'], a[href$='.docx'] {
+                background: url({% static 'icons/doc.png'%}) no-repeat 100%; /* вставка иконки */
+                padding-right: 18px; /* вставка иконки */
+            }
+            a[href$='.xls'], a[href$='.xlsx'] {
+                background: url({% static 'icons/xls.png'%}) no-repeat 100%;
+                padding-right: 18px;
+            }
+            a[href$='.zip'] {
+                background: url({% static 'icons/zip.png'%}) no-repeat 100%;
+                padding-right: 18px;
+            }
+            a[href$='.pdf'] {
+                background: url({% static 'icons/pdf.png'%}) no-repeat 100%;
+                padding-right: 18px;
+            }
+        </style>
+        <div class="col_w900 float_l">
+                <ul class="tmo_list">
+                    <h1> Список документов</h1>
+                    <hr>
+                    {% for doc in docs %}
+                        <div class="post_box">
+                          <li><a href="{{ doc.document }}">
+                             {{ doc.description }}</a>
+                          </li>
+                        </div>
+                    {% endfor %}
+                </ul>
+        </div>
+    </div>
+    <div class="cleaner"></div>
+    </div>
+{% endblock %}

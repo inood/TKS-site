@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div id="templatemo_body_wrapper">
+<div id="templatemo_wrapper">
+
+
+    <div id="templatemo_main">
+    
+    	<h2>Контактная информация</h2>
+        <div class="col_w450 float_l">
+          
+            <p>Информация о нас.</p>
+            
+          <div class="cleaner h30"></div>
+            
+            <div id="map">
+                <h4>Мы находимся тут</h4>
+                <div style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/11352/strezgevoy/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Стрежевой</a>
+                    <a href="https://yandex.ru/maps/11352/strezgevoy/?ll=77.606805%2C60.739095&mode=routes&rtext=~60.739274%2C77.606115&rtt=auto&ruri=~&utm_medium=mapframe&utm_source=maps&z=17.45" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCQ3Z-AGsD" width="400" height="300" frameborder="1" allowfullscreen="true" style="position:relative;">
+
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="cleaner h30"></div>
+            
+                <h4>Адреса телефоны</h4>
+                
+                	<h6>Почтовый адрес</h6>
+                   	  	, <br />
+                        <br />
+						<br />
+                		<br />
+                     	Телефон: 000-000-0000<br />
+
+        
+          <div class="cleaner"></div>
+        </div>
+        
+        <div class="col_w450 float_r">
+            <div id="contact_form">
+        
+                <h4>Обратная связь</h4>
+                
+                	<form method="post" name="contact" action="#">
+                         {% csrf_token %}
+                    
+                            <label for="author">Имя:</label>
+                            <input name="author" type="text" class="input_field" id="author" maxlength="50" placeholder="Введите имя" />
+                          	<div class="cleaner_h10"></div>
+                            
+                            <label for="email">Е-mail:</label>
+                            <input class="input_field" id="id_sender" name="sender" placeholder="Ваш e-mail">
+                          	<div class="cleaner_h10"></div>
+                            
+                            <label for="subject">Тема:</label>
+                            <input name="subject" type="text" class="input_field" id="subject" maxlength="50" placeholder="Введите тему" />
+                            <div class="cleaner_h10"></div>
+
+                            <label for="id_message">Сообщение:</label>
+                            <textarea class="required" id="id_message" name="message" placeholder="Введите ваше сообщение"></textarea>
+                            <div class="cleaner_h10"></div>
+
+{#                            <div>#}
+{#	                         {{ form.copy.errors }}#}
+{#	                         <label for="id_copy">{{ form.copy }} Отправить копию себе </label>#}
+{#	                        </div>#}
+
+                            <input type="submit" class="submit_btn float_l" name="submit" id="submit" value="Отправить" />
+
+                        
+                   </form>
+
+            </div> 
+        </div>
+        
+        <div class="cleaner"></div>
+    </div>
+	<div id="templatemo_main_bottom"></div>
+	<div class="cleaner"></div>
+</div>
+</div>
+
+{% endblock %}

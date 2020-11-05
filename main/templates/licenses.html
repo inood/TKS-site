@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+  <h2>Наши лицензии</h2>
+    	<div class="col_w900 float_l">
+        {% for img in licenses %}
+            <a href="{{ img.img.url }}">
+                <img src='{{ img.img.url }}' width="300">
+            </a>
+        {% endfor %}
+        </div>
+    <div class="cleaner"></div>
+{% endblock %}
